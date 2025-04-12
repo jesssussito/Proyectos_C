@@ -1,0 +1,31 @@
+# Project: Proyecto1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = monticulo.o prueba2.o
+LINKOBJ  = monticulo.o prueba2.o
+LIBS     = -L"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -g3
+INCS     = -I"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/include" -I"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/include" -I"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/PROGRAMAS/DEV C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Proyecto.exe
+CXXFLAGS = $(CXXINCS) -m32 -g3
+CFLAGS   = $(INCS) -m32 -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+monticulo.o: monticulo.c
+	$(CC) -c monticulo.c -o monticulo.o $(CFLAGS)
+
+prueba2.o: prueba2.c
+	$(CC) -c prueba2.c -o prueba2.o $(CFLAGS)

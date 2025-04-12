@@ -1,0 +1,163 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Informática Teórica - Regex</title>
+  <meta name="description" content="Bootstrap 5 form validation using HTML5, CSS3 and Javascript.
+                                    Also implements RegEx and jQuery.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Forms">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="https://www.avdveen.nl/bs-form-validation/">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="header-style col-sm-12">
+        <h1>Informática Teórica - Regex en JavaScript</h1>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-sm-2">
+        <!-- gutter left -->
+      </div>
+
+      <div class="col-sm-12">
+
+        <form class="form-style">
+          <div class="row">
+            <div class="col-12">
+              <p>Típica información que validar en un formulario:
+              </p>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-6">
+              <input id="firstName" class="validate mb-3 form-control" type="text" aria-label="first-name"
+                placeholder="Nombre">
+            </div>
+
+            <div class="col-6">
+              <input id="lastName" class="validate mb-3 form-control" type="text" placeholder="apellidos">
+            </div>
+
+          </div> <!-- end of row -->
+
+          <div class="row">
+
+            <div class="col-6">
+              <input id="dateOfBirth" class="validate mb-3 form-control" type="text"
+                placeholder="dd-mm-yyyy (fecha de nacimiento)">
+            </div>
+
+            <div class="col-6">
+              <input id="mobileNumber" class="validate mb-3 form-control" type="text" placeholder="número de teléfono (+XX XXXXXXXXX)">
+            </div>
+
+          </div> <!-- end of row -->
+
+          <div class="row">
+
+            <div class="col-6">
+              <input id="password" class="validate mb-3 form-control" type="text" placeholder="contraseña">
+            </div>
+
+            <div class="col-6">
+              <input id="email" class="validate mb-3 form-control" type="text" placeholder="e-mail">
+            </div>
+
+          </div> <!-- end of row -->
+
+          <div class="row">
+
+            <div class="mb-3 col-12">
+              <div class="succes-msg collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  La entrada del formulario ha sido validada.
+
+                  ¡Enhorabuena!
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-12">
+              <button type="button" id="submitButton" class="mb-3 btn btn-outline-success" disabled>Enviar</button>
+              <button type="button" id="autoFillButton" class="mb-3 btn btn-outline-success">Rellenar campos con datos de prueba</button>
+              <button type="button" id="showRegexButton" class="mb-3 btn btn-outline-success">Información RegEx</button>
+            </div>
+
+          </div> <!-- end of row -->
+
+          <div class="row">
+            
+            <div class="mb-3 col-12">
+              <div class="regex-msg collapse multi-collapse" id="regexMsg">
+                <div class="card card-body">
+                  <p>Confecciona las siguientes RegEx patterns:</p> 
+                  <p class="font-monospace">Nombre: Campo con mínimo 2 caracteres o como máximo 30</p>
+                  <p class="font-monospace">Apellidos: Como máximo una cadena de 40 caracteres</p>
+                  <p class="font-monospace">Fecha de nacimiento con el formato: dd-mm-yyyy</p>
+                  <p class="font-monospace">Teléfono móvil: con el formato: +XX XXXXXXXXX </p>
+                  <p class="font-monospace">Email: debe ser @usal.es</p>
+                  <p class="font-monospace">Contraseña: debe tener al menos un número, una letra mayúscula, una minúscula, tener 8 caracteres o más y contener un caracter especial (!@#$&*)</p>
+                </div>
+              </div>
+            </div>
+
+          </div> <!-- end of row -->
+          
+        </form>
+      </div>
+      <div class="col-sm-2">
+        <!-- gutter right -->
+      </div>
+    </div> <!-- end of row -->
+
+  </div> <!-- end of row -->
+
+  </div> <!-- end of container -->
+
+  <!-- js -->
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      setUpValidation();
+      addEventListenerToButton("autoFillButton");
+      addEventListenerToButton("showRegexButton");
+    })
+
+  </script>
+
+</body>
+
+</html>
