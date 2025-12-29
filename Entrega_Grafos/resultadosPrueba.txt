@@ -1,0 +1,65 @@
+
+Grafo  (Orden 7)
+
+       alc gEnt oTop dist peso ant 
+     +----+----+----+----+----+----+
+   1 |  0 |  1 |  0 |  * |  * |  0 | -> 2,  2 -> 4,  1
+   2 |  0 |  1 |  0 |  * |  * |  0 | -> 4,  3 -> 5, 10
+   3 |  0 |  1 |  0 |  * |  * |  0 | -> 1,  4 -> 6,  5
+   4 |  0 |  2 |  0 |  * |  * |  0 | -> 3,  2 -> 5,  2 -> 6,  8 -> 7,  4
+   5 |  0 |  2 |  0 |  * |  * |  0 | -> 7,  6
+   6 |  0 |  3 |  0 |  * |  * |  0 |
+   7 |  0 |  2 |  0 |  * |  * |  0 | -> 6,  1
+     +----+----+----+----+----+----+
+
+
+Profundidad: 5 7 6 1 2 4 3 
+Amplitud : 5 7 6 1 2 4 3 
+Grafo ciclico ¡ No es posible la ordenación topológica !
+
+Versión básica Dijkstra: caminos mínimos desde 1
+Grafo  (Orden 7)
+
+       alc gEnt oTop dist peso ant 
+     +----+----+----+----+----+----+
+   1 |  1 |  1 |  0 |  0 |  * |  0 | -> 2,  2 -> 4,  1
+   2 |  1 |  1 |  0 |  2 |  * |  1 | -> 4,  3 -> 5, 10
+   3 |  1 |  1 |  0 |  3 |  * |  4 | -> 1,  4 -> 6,  5
+   4 |  1 |  2 |  0 |  1 |  * |  1 | -> 3,  2 -> 5,  2 -> 6,  8 -> 7,  4
+   5 |  1 |  2 |  0 |  3 |  * |  4 | -> 7,  6
+   6 |  1 |  3 |  0 |  6 |  * |  7 |
+   7 |  1 |  2 |  0 |  5 |  * |  4 | -> 6,  1
+     +----+----+----+----+----+----+
+
+Trayectoria desde 1 hasta 6: 1  4  7  6 Camino de coste 6 
+
+Todas las trayectorias desde 1:
+ 1  2 		Coste camino a vertice 2: 2
+ 1  4  3 		Coste camino a vertice 3: 3
+ 1  4 		Coste camino a vertice 4: 1
+ 1  4  5 		Coste camino a vertice 5: 3
+ 1  4  7  6 		Coste camino a vertice 6: 6
+ 1  4  7 		Coste camino a vertice 7: 5
+
+Versión mejorada Dijkstra: caminos mínimos desde 1
+Grafo  (Orden 7)
+
+       alc gEnt oTop dist peso ant 
+     +----+----+----+----+----+----+
+   1 |  1 |  1 |  0 |  0 |  * |  0 | -> 2,  2 -> 4,  1
+   2 |  1 |  1 |  0 |  2 |  * |  1 | -> 4,  3 -> 5, 10
+   3 |  1 |  1 |  0 |  3 |  * |  4 | -> 1,  4 -> 6,  5
+   4 |  1 |  2 |  0 |  1 |  * |  1 | -> 3,  2 -> 5,  2 -> 6,  8 -> 7,  4
+   5 |  1 |  2 |  0 |  3 |  * |  4 | -> 7,  6
+   6 |  1 |  3 |  0 |  6 |  * |  7 |
+   7 |  1 |  2 |  0 |  5 |  * |  4 | -> 6,  1
+     +----+----+----+----+----+----+
+
+
+Caminos Mínimos desde 1
+ 1  2 		Coste camino a vertice 2: 2
+ 1  4  3 		Coste camino a vertice 3: 3
+ 1  4 		Coste camino a vertice 4: 1
+ 1  4  5 		Coste camino a vertice 5: 3
+ 1  4  7  6 		Coste camino a vertice 6: 6
+ 1  4  7 		Coste camino a vertice 7: 5

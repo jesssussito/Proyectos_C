@@ -1,0 +1,16 @@
+Situación INICIAL: 
+| -1| -1| -1| -1| -1| -1| -1| -1| -1| -1| -1| -1| -1| -1| -1| -1| contenido  vector
+----------------------------------------------------------------
+   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  índices vector
+
+Formada clase de equivalencia {5,1,7,8,9,13}
+Formada clase de equivalencia {11,3,4,14,15}
+Formada clase de equivalencia {2,6,12,10,0}
+Situación FINAL:   
+|  2|  5| -5| 11| 11| -6|  2|  5|  5|  5|  2| -5|  2|  5| 11| 11| contenido  vector
+----------------------------------------------------------------
+   0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  índices vector
+
+
+
+El elemento 5 pertenence a la clase de equivalencia con representante 5
